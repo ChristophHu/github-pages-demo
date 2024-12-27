@@ -5,11 +5,12 @@
     <div>Details</div>
   </header>
   <hr class="my-4 border-b border-dark">
-  <div class="flex flex-col md:flex-row">
-    <div class="flex flex-row md:flex-col w-full md:w-60 my-2 bg-red-100">
-      <div class="h-32 w-32 rounded-full">
-        <img src="https://placehold.co/200" alt="img">
-      </div>
+  <div class="flex flex-col md:flex-row" *ngIf="user$ | async as user">
+    <div class="flex flex-row md:flex-col w-full md:w-60 my-2 p-2 bg-red-100">
+      <!-- <div class="h-32 w-32 rounded-full"> -->
+        <!-- <img src="https://placehold.co/200" alt="img"> -->
+         <img [src]="user.data.avatar_url" alt="user.data.login" class="h-32 w-32 rounded-full">
+      <!-- </div> -->
       <div>Profile</div>
       <div class="flex flex-row ">
         <div>Star</div>
@@ -19,3 +20,4 @@
     <div class="grow my-2 border border-lighter rounded-lg bg-green-100">Repository</div>
   </div>
 </div>
+<pre>{{ user$ | async | json }}</pre>
