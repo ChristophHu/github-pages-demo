@@ -3,12 +3,14 @@ import { RouterModule } from '@angular/router';
 import { GithubService } from './core/services/github.service';
 import { Observable } from 'rxjs';
 import { AsyncPipe, CommonModule, JsonPipe } from '@angular/common';
+import { IconsComponent } from './shared/components/icons/icons.component';
 
 @Component({
   selector: 'app-root',
   imports: [
     AsyncPipe,
     CommonModule,
+    IconsComponent,
     JsonPipe,
     RouterModule
   ],

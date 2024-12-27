@@ -6,15 +6,35 @@
   </header>
   <hr class="my-4 border-b border-dark">
   <div class="flex flex-col md:flex-row" *ngIf="user$ | async as user">
-    <div class="flex flex-row md:flex-col w-full md:w-60 my-2 p-2 bg-red-100">
+    <div class="flex flex-row md:flex-col w-full md:w-60 my-2 p-2 items-center bg-red-100">
       <!-- <div class="h-32 w-32 rounded-full"> -->
         <!-- <img src="https://placehold.co/200" alt="img"> -->
-         <img [src]="user.data.avatar_url" alt="user.data.login" class="h-32 w-32 rounded-full">
+         <img [src]="user.data.avatar_url" alt="user.data.login" class="h-56 w-56 border border-static_gray rounded-full">
       <!-- </div> -->
-      <div>Profile</div>
+      <span class="sr-only">Profile</span>
+      <div class="text-dark">
+        <h2 class="text-2xl text-darker font-bold">Christoph</h2>
+        <p>ChristophHu</p>
+      </div>
+      <hr class="my-2 border-b border-dark">
       <div class="flex flex-row ">
-        <div>Star</div>
-        <div>Fork</div>
+        <div class="flex items-center">
+          <div class="h-5 w-5">
+            <icons name="users"></icons>
+          </div>
+          <span class="ml-1">{{ user.data.followers }}</span>
+          <span class="ml-1">followers</span>
+        </div>
+        <div class="h-5 w-5">
+          <icons name="dot"></icons>
+        </div>
+        <div class="flex items-center">
+          <div class="h-5 w-5">
+            <icons name="users"></icons>
+          </div>
+          <span class="ml-1">{{ user.data.following }}</span>
+          <span class="ml-1">following</span>
+        </div>
       </div>
     </div>
     <div class="grow my-2 border border-lighter rounded-lg bg-green-100">Repository</div>
