@@ -25,10 +25,24 @@ export class AppComponent {
   repos$: Observable<any>
   this_repo$: Observable<any>
   user$: Observable<any>
+
+  show_settings: boolean = false
+  name: string = ''
+  version: string = '0.0.1'
   
   constructor(private githubService: GithubService) {
     this.repos$ = this.githubService.repos$
     this.this_repo$ = this.githubService.this_repo$
     this.user$ = this.githubService.user$
+
+    this.name = this.githubService.getThisRepo()
+    this.version = this.githubService.getVersion()
+  }
+
+  toggleSettings() {
+    this.show_settings = !this.show_settings
+  }
+  toggleTheme() {
+    this.toggleSettings()
   }
 }
