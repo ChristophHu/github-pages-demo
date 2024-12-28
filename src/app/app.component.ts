@@ -11,7 +11,7 @@ import { IconsComponent } from './shared/components/icons/icons.component';
     AsyncPipe,
     CommonModule,
     IconsComponent,
-    JsonPipe,
+    // JsonPipe,
     RouterModule
   ],
   providers: [
@@ -23,10 +23,12 @@ import { IconsComponent } from './shared/components/icons/icons.component';
 export class AppComponent {
 
   repos$: Observable<any>
+  this_repo$: Observable<any>
   user$: Observable<any>
   
   constructor(private githubService: GithubService) {
     this.repos$ = this.githubService.repos$
+    this.this_repo$ = this.githubService.this_repo$
     this.user$ = this.githubService.user$
   }
 }
