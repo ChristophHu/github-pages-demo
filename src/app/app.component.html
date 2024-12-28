@@ -4,40 +4,60 @@
     <div>Features</div>
     <div>Details</div>
   </header>
-  <hr class="my-4 border-b border-dark">
-  <div class="flex flex-col md:flex-row" *ngIf="user$ | async as user">
-    <div class="flex flex-row md:flex-col w-full md:w-60 my-2 p-2 items-center bg-red-100">
+  <hr class="h-px my-4 border-none bg-borderline">
+  <div class="flex flex-col lg:flex-row" *ngIf="user$ | async as user">
+    <div class="flex flex-row lg:flex-col w-full lg:w-80 my-2 p-2">
       <!-- <div class="h-32 w-32 rounded-full"> -->
         <!-- <img src="https://placehold.co/200" alt="img"> -->
-         <img [src]="user.data.avatar_url" alt="user.data.login" class="h-56 w-56 border border-static_gray rounded-full">
+         <img [src]="user.data.avatar_url" alt="user.data.login" class="h-76 w-76 border border-borderline rounded-full">
       <!-- </div> -->
       <span class="sr-only">Profile</span>
-      <div class="text-dark">
-        <h2 class="text-2xl text-darker font-bold">Christoph</h2>
-        <p>ChristophHu</p>
-      </div>
-      <hr class="my-2 border-b border-dark">
-      <div class="flex flex-row ">
-        <div class="flex items-center">
-          <div class="h-5 w-5">
-            <icons name="users"></icons>
+      <div class="flex flex-col mt-4 ml-4 lg:ml-0">
+        <div class="w-full text-dark items-center">
+          <h2 class="text-2xl text-darker font-bold">Christoph</h2>
+          <div class="flex flex-row">
+            <span>ChristophHu</span>
+            <div class="h-5 w-5 -m-1">
+              <icons name="dot"></icons>
+            </div>
+            <span>he/him</span>
           </div>
-          <span class="ml-1">{{ user.data.followers }}</span>
-          <span class="ml-1">followers</span>
         </div>
-        <div class="h-5 w-5">
-          <icons name="dot"></icons>
-        </div>
-        <div class="flex items-center">
-          <div class="h-5 w-5">
-            <icons name="users"></icons>
+        <a href="" class="w-full my-4 p-1 bg-secondary border border-borderline text-center text-darker text-sm font-bold rounded-lg">profile</a>
+        <span class="sr-only">profile stats</span>
+        <div class="flex flex-row text-sm">
+          <div class="flex items-center">
+            <div class="h-4 w-4">
+              <icons name="users"></icons>
+            </div>
+            <span class="ml-1 text-darker font-bold">{{ user.data.followers }}</span>
+            <span class="ml-1">followers</span>
           </div>
-          <span class="ml-1">{{ user.data.following }}</span>
-          <span class="ml-1">following</span>
+          <div class="h-5 w-5 -m-1">
+            <icons name="dot"></icons>
+          </div>
+          <div class="flex items-center">
+            <span class="ml-1 text-darker font-bold">{{ user.data.following }}</span>
+            <span class="ml-1">following</span>
+          </div>
+        </div>
+        <div class="flex flex-row mt-2 text-sm">
+          <div class="flex items-center">
+            <div class="h-4 w-4">
+              <icons name="notebook"></icons>
+            </div>
+            <div class="flex items-center">
+              <span class="ml-1 text-darker font-bold">{{ user.data.public_repos }}</span>
+              <span class="ml-1">public repositories</span>
+            </div>
+          </div>
         </div>
       </div>
+      
+      
     </div>
-    <div class="grow my-2 border border-lighter rounded-lg bg-green-100">Repository</div>
+    <div class="grow my-2 border border-borderline rounded-lg">Repository</div>
   </div>
 </div>
-<pre>{{ user$ | async | json }}</pre>
+<!-- <pre>{{ user$ | async | json }}</pre> -->
+<pre>{{ repos$ | async | json }}</pre>

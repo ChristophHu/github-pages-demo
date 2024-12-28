@@ -22,9 +22,11 @@ import { IconsComponent } from './shared/components/icons/icons.component';
 })
 export class AppComponent {
 
+  repos$: Observable<any>
   user$: Observable<any>
   
   constructor(private githubService: GithubService) {
+    this.repos$ = this.githubService.repos$
     this.user$ = this.githubService.user$
   }
 }
