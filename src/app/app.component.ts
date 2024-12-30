@@ -18,7 +18,7 @@ import { IconsComponent } from './shared/components/icons/icons.component';
     GithubService
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass', './github.style.sass']
+  styleUrl: './app.component.sass'
 })
 export class AppComponent {
 
