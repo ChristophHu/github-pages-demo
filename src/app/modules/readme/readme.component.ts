@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MarkdownComponent } from 'ngx-markdown';
 import { GithubService } from '../../core/services/github.service';
 import { Observable } from 'rxjs';
@@ -11,7 +11,8 @@ import { AsyncPipe } from '@angular/common';
     MarkdownComponent
   ],
   templateUrl: './readme.component.html',
-  styleUrl: './readme.component.sass'
+  styleUrl: './readme.component.sass',
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class ReadmeComponent {
   repos$: Observable<any>
