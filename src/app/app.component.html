@@ -108,16 +108,8 @@
       </div>
     </div>
     <div class="relative grow ml-0 lg:ml-4 p-4 border border-borderline rounded-lg">
-      <markdown [src]="'/assets/README.md'" class="markdown-body" ngPreserveWhitespaces ></markdown>
-      <!-- <markdown ngPreserveWhitespaces>
-        # Markdown
-
-        ## Test
-      </markdown> -->
-      <!-- <markdown [src]="'https://github.com/' + user.data.login + '/' + repo.data.name + '/blob/main/README.md'"></markdown> -->
-      <!-- <markdown>
-        The following examples are intended as a quick markdown reference and showcase. It is based on Adam Pritchard work of [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-      </markdown> -->
+      <markdown [src]="'https://raw.githubusercontent.com/' + user.data?.login + '/' + repo.data?.name + '/refs/heads/main/README.md'" class="markdown-body" ngPreserveWhitespaces></markdown>
+      <!-- <markdown [src]="'/assets/README.md'" class="markdown-body" ngPreserveWhitespaces></markdown> -->
     </div>
   </div>
 </div>
