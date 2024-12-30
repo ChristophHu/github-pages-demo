@@ -4,7 +4,6 @@ import { GithubService } from './core/services/github.service';
 import { Observable } from 'rxjs';
 import { AsyncPipe, CommonModule, JsonPipe } from '@angular/common';
 import { IconsComponent } from './shared/components/icons/icons.component';
-import { MarkdownComponent, MarkdownService } from 'ngx-markdown'
 
 @Component({
   selector: 'app-root',
@@ -13,12 +12,10 @@ import { MarkdownComponent, MarkdownService } from 'ngx-markdown'
     CommonModule,
     IconsComponent,
     JsonPipe,
-    MarkdownComponent,
     RouterModule
   ],
   providers: [
-    GithubService,
-    MarkdownService
+    GithubService
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass', './github.style.sass']
