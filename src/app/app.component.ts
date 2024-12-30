@@ -11,7 +11,7 @@ import { IconsComponent } from './shared/components/icons/icons.component';
     AsyncPipe,
     CommonModule,
     IconsComponent,
-    JsonPipe,
+    // JsonPipe,
     RouterModule
   ],
   providers: [
