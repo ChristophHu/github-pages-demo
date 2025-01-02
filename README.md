@@ -1,7 +1,9 @@
 # GithubPagesDemo
 
 ## Demo
-<a href="https://github.com/christophhu/github-pages-demo"><img align="right" src="https://github.com/ChristophHu/ChristophHu/blob/main/assets/img/github-pages-demo.png" width="300" alt="image" /></a>
+<p align="center">
+  <a href="https://github.com/christophhu/github-pages-demo"><img align="right" src="https://github.com/ChristophHu/ChristophHu/blob/main/assets/img/github-pages-demo.png" width="300" alt="image" /></a>
+</p>
 
 ## Description
 This repository is a dummy and demo application built with Angular 19, showcasing the integration with GitHub's API. It displays user information, repositorie, and other relevant data using Angular components and services. The application is styled using SASS and leverages TailwindCSS for utility-first styling.
