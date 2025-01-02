@@ -2,7 +2,7 @@
 
 ## Demo
 <p align="center">
-  <a href="https://github.com/christophhu/github-pages-demo"><img src="https://github.com/ChristophHu/ChristophHu/blob/main/assets/img/github-pages-demo.png" width="500" alt="image" /></a>
+  <a href="https://christophhu.github.io/github-pages-demo"><img src="https://github.com/ChristophHu/ChristophHu/blob/main/assets/img/github-pages-demo.png" width="500" alt="image" /></a>
 </p>
 
 ## Description
