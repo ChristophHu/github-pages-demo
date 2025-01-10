@@ -33,6 +33,9 @@ To run the project, use the following command:
 ng serve
 ```
 
+## Change Log
+- add google-analythics
+
 ## License
 This project is licensed under the MIT License.
 
