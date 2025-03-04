@@ -41,7 +41,7 @@
     <div class="flex flex-col lg:flex-row" *ngIf="user$ | async as user">
       <div class="flex-none flex flex-row lg:flex-col w-72">
           <!-- <img src="https://placehold.co/600" alt="img" class="h-72 w-72 border border-borderline rounded-full"> -->
-          <img [src]="user?.data?.avatar_url" class="h-72 w-72 border border-borderline rounded-full">
+          <img [src]="user?.data?.avatar_url" class="h-72 w-72 border border-borderline filter brightness-50 grayscale rounded-full">
         <span class="sr-only">Profile</span>
         <div class="flex flex-col mt-2 ml-4 lg:ml-0">
           <div class="w-full text-dark items-center">
@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="relative grow ml-0 lg:ml-4 mt-4 lg:mt-0 p-4 border border-borderline rounded-lg scrollbar-hide">
+      <div class="relative grow ml-0 lg:ml-4 mt-4 lg:mt-0 p-4 border border-accent rounded-lg scrollbar-hide">
         <router-outlet></router-outlet>
       </div>
     </div>
